@@ -361,32 +361,41 @@ function openTool(toolType) {
         'cost-calculator': {
             title: 'South African Cost Calculator',
             url: 'tools/cost-calculator.html',
-            description: 'Calculate your project costs with current SA market prices'
+            description: 'Calculate your project costs with current SA market prices',
+            available: true
         },
         'hardware-wizard': {
             title: 'Hardware Selection Wizard',
             url: 'tools/hardware-wizard.html',
-            description: 'Get personalized hardware recommendations based on your needs'
+            description: 'Get personalized hardware recommendations based on your needs',
+            available: false
         },
         'supplier-finder': {
             title: 'SA Supplier Finder',
             url: 'tools/supplier-finder.html',
-            description: 'Find trusted Arduino suppliers near you in South Africa'
+            description: 'Find trusted Arduino suppliers near you in South Africa',
+            available: false
         },
         'code-playground': {
             title: 'Arduino Code Playground',
             url: 'tools/code-playground.html',
-            description: 'Test and experiment with Arduino code in your browser'
+            description: 'Test and experiment with Arduino code in your browser',
+            available: false
         }
     };
     
     const tool = tools[toolType];
     if (tool) {
-        // For now, show coming soon message
-        showToolComingSoon(tool);
+        if (tool.available) {
+            // Navigate to the actual tool
+            window.location.href = tool.url;
+        } else {
+            // Show coming soon message for tools not yet implemented
+            showToolComingSoon(tool);
+        }
         
         // Track tool usage
-        trackEvent('tool_opened', { tool: toolType });
+        trackEvent('tool_opened', { tool: toolType, available: tool.available });
     }
 }
 
