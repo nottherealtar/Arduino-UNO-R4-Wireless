@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: Getting Started - Arduino UNO R4 WiFi Journey</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/module.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="module-header">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">›</span>
+                <a href="../modules/">Modules</a>
+                <span class="separator">›</span>
+                <span class="current">Module 1: Getting Started</span>
+            </nav>
+            
+            <div class="module-title-section">
+                <div class="module-icon">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="module-info">
+                    <h1>Module 1: Getting Started</h1>
+                    <p class="module-description">Your first steps into Arduino UNO R4 WiFi and peripheral projects</p>
+                    <div class="module-meta">
+                        <span class="difficulty beginner"><i class="fas fa-seedling"></i> Beginner</span>
+                        <span class="duration"><i class="fas fa-clock"></i> ~3 hours</span>
+                        <span class="progress-indicator">
+                            <i class="fas fa-chart-line"></i> 
+                            <span id="module-progress">0%</span> Complete
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="module-nav">
+        <div class="container">
+            <div class="nav-pills">
+                <button class="nav-pill active" data-section="overview">
+                    <i class="fas fa-map"></i> Overview
+                </button>
+                <button class="nav-pill" data-section="safety">
+                    <i class="fas fa-shield-alt"></i> Safety First
+                </button>
+                <button class="nav-pill" data-section="theory">
+                    <i class="fas fa-book"></i> Understanding Arduino
+                </button>
+                <button class="nav-pill" data-section="ethics">
+                    <i class="fas fa-balance-scale"></i> Ethics & Legal
+                </button>
+                <button class="nav-pill" data-section="quiz">
+                    <i class="fas fa-question-circle"></i> Knowledge Check
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <main class="module-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Sidebar with progress -->
+                <aside class="module-sidebar">
+                    <div class="progress-card">
+                        <h3><i class="fas fa-trophy"></i> Your Progress</h3>
+                        <div class="progress-ring">
+                            <svg width="80" height="80">
+                                <circle cx="40" cy="40" r="36" stroke="#2d2d2d" stroke-width="8" fill="none"/>
+                                <circle cx="40" cy="40" r="36" stroke="#00a8cc" stroke-width="8" fill="none" 
+                                        stroke-dasharray="226" stroke-dashoffset="226" class="progress-circle"/>
+                            </svg>
+                            <div class="progress-text">0%</div>
+                        </div>
+                        <div class="checklist">
+                            <div class="checklist-item" data-item="overview">
+                                <i class="fas fa-circle"></i>
+                                <span>Module Overview</span>
+                            </div>
+                            <div class="checklist-item" data-item="safety">
+                                <i class="fas fa-circle"></i>
+                                <span>Safety Guidelines</span>
+                            </div>
+                            <div class="checklist-item" data-item="theory">
+                                <i class="fas fa-circle"></i>
+                                <span>Arduino Basics</span>
+                            </div>
+                            <div class="checklist-item" data-item="ethics">
+                                <i class="fas fa-circle"></i>
+                                <span>Ethics & Legal</span>
+                            </div>
+                            <div class="checklist-item" data-item="quiz">
+                                <i class="fas fa-circle"></i>
+                                <span>Knowledge Check</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="help-card">
+                        <h4><i class="fas fa-question-circle"></i> Need Help?</h4>
+                        <p>Stuck on something? Check out our South African Arduino community!</p>
+                        <a href="#" class="btn btn-outline btn-small">Join Community</a>
+                    </div>
+                </aside>
+
+                <!-- Main content area -->
+                <div class="main-content-area">
+                    <!-- Overview Section -->
+                    <section id="overview" class="content-section active">
+                        <div class="section-header">
+                            <h2><i class="fas fa-map"></i> Module Overview</h2>
+                            <p>Welcome to your Arduino UNO R4 WiFi journey! This module will introduce you to the fundamentals.</p>
+                        </div>
+
+                        <div class="overview-grid">
+                            <div class="overview-card">
+                                <i class="fas fa-lightbulb"></i>
+                                <h3>What You'll Learn</h3>
+                                <ul>
+                                    <li>Arduino UNO R4 WiFi basics and capabilities</li>
+                                    <li>Safety practices for electronics work</li>
+                                    <li>Understanding peripheral spoofing concepts</li>
+                                    <li>Ethical considerations and legal boundaries</li>
+                                    <li>South African context and challenges</li>
+                                </ul>
+                            </div>
+
+                            <div class="overview-card">
+                                <i class="fas fa-tools"></i>
+                                <h3>What You'll Need</h3>
+                                <ul>
+                                    <li>Computer with internet connection</li>
+                                    <li>Notepad for taking notes</li>
+                                    <li>Open and curious mind</li>
+                                    <li>Commitment to ethical learning</li>
+                                </ul>
+                                <p class="note"><strong>Note:</strong> No hardware needed for this module!</p>
+                            </div>
+
+                            <div class="overview-card">
+                                <i class="fas fa-clock"></i>
+                                <h3>Time Investment</h3>
+                                <div class="time-breakdown">
+                                    <div class="time-item">
+                                        <span class="time-label">Reading & Learning:</span>
+                                        <span class="time-value">2 hours</span>
+                                    </div>
+                                    <div class="time-item">
+                                        <span class="time-label">Interactive Elements:</span>
+                                        <span class="time-value">45 mins</span>
+                                    </div>
+                                    <div class="time-item">
+                                        <span class="time-label">Knowledge Check:</span>
+                                        <span class="time-value">15 mins</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sa-context-banner">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>South African Context</h4>
+                                <p>This journey is specifically designed for South African learners, taking into account our unique challenges like import costs, supplier availability, power constraints, and local regulations.</p>
+                            </div>
+                        </div>
+
+                        <div class="section-actions">
+                            <button class="btn btn-primary" onclick="completeSection('overview')">
+                                Mark as Complete <i class="fas fa-check"></i>
+                            </button>
+                            <button class="btn btn-outline" onclick="navigateToSection('safety')">
+                                Continue to Safety <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Safety First Section -->
+                    <section id="safety" class="content-section">
+                        <div class="section-header">
+                            <h2><i class="fas fa-shield-alt"></i> Safety First</h2>
+                            <p>Before we dive into exciting projects, let's establish essential safety practices.</p>
+                        </div>
+
+                        <div class="safety-alert">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div>
+                                <h3>Critical Safety Warning</h3>
+                                <p>Electronics work involves risks including electric shock, component damage, and fire. Always prioritize safety over speed or convenience.</p>
+                            </div>
+                        </div>
+
+                        <div class="safety-grid">
+                            <div class="safety-category">
+                                <h3><i class="fas fa-bolt"></i> Electrical Safety</h3>
+                                <div class="safety-checklist">
+                                    <div class="safety-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <div>
+                                            <h4>ESD Protection</h4>
+                                            <p>Use anti-static wrist straps (available from SA suppliers like Communica for ~R50). Touch grounded metal before handling components.</p>
+                                        </div>
+                                    </div>
+                                    <div class="safety-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <div>
+                                            <h4>Power Management</h4>
+                                            <p>Always disconnect power before making connections. Use proper USB adapters (5V/2A max) - avoid cheap chargers that can damage boards.</p>
+                                        </div>
+                                    </div>
+                                    <div class="safety-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <div>
+                                            <h4>Component Handling</h4>
+                                            <p>Handle boards by edges only. Store in anti-static bags. Check connections twice before powering on.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="safety-category">
+                                <h3><i class="fas fa-thermometer-half"></i> SA Climate Considerations</h3>
+                                <div class="safety-checklist">
+                                    <div class="safety-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <div>
+                                            <h4>Heat Management</h4>
+                                            <p>SA temperatures (0-50°C) are within Arduino specs, but avoid direct sunlight. Ensure ventilation in enclosed projects.</p>
+                                        </div>
+                                    </div>
+                                    <div class="safety-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <div>
+                                            <h4>Humidity & Dust</h4>
+                                            <p>Coastal humidity can cause corrosion. Store components in sealed containers with silica gel. Clean with isopropyl alcohol.</p>
+                                        </div>
+                                    </div>
+                                    <div class="safety-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <div>
+                                            <h4>Power Supply Issues</h4>
+                                            <p>SA's power grid instability can damage sensitive electronics. Use UPS or surge protectors for valuable equipment.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="interactive-safety-check">
+                            <h3><i class="fas fa-clipboard-check"></i> Interactive Safety Checklist</h3>
+                            <p>Complete this checklist to ensure you understand the safety requirements:</p>
+                            
+                            <div class="interactive-checklist">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="safety-check" value="esd">
+                                    <span class="checkmark"></span>
+                                    <span class="label-text">I understand the importance of ESD protection and will use proper grounding techniques</span>
+                                </label>
+                                
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="safety-check" value="power">
+                                    <span class="checkmark"></span>
+                                    <span class="label-text">I will always disconnect power before making circuit changes</span>
+                                </label>
+                                
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="safety-check" value="environment">
+                                    <span class="checkmark"></span>
+                                    <span class="label-text">I understand SA-specific environmental challenges (heat, humidity, power stability)</span>
+                                </label>
+                                
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="safety-check" value="responsibility">
+                                    <span class="checkmark"></span>
+                                    <span class="label-text">I take full responsibility for my safety and will work carefully</span>
+                                </label>
+                            </div>
+                            
+                            <button id="safety-complete-btn" class="btn btn-primary" disabled onclick="completeSafetyCheck()">
+                                Safety Commitment Complete <i class="fas fa-shield-alt"></i>
+                            </button>
+                        </div>
+
+                        <div class="section-actions">
+                            <button class="btn btn-outline" onclick="navigateToSection('overview')">
+                                <i class="fas fa-arrow-left"></i> Back to Overview
+                            </button>
+                            <button class="btn btn-outline" onclick="navigateToSection('theory')">
+                                Continue to Theory <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Theory Section -->
+                    <section id="theory" class="content-section">
+                        <div class="section-header">
+                            <h2><i class="fas fa-book"></i> Understanding Arduino UNO R4 WiFi</h2>
+                            <p>Let's explore what makes the Arduino UNO R4 WiFi special for peripheral projects.</p>
+                        </div>
+
+                        <div class="theory-content">
+                            <div class="concept-card featured">
+                                <h3><i class="fas fa-microchip"></i> What is Arduino UNO R4 WiFi?</h3>
+                                <p>The Arduino UNO R4 WiFi is a microcontroller board based on the Renesas RA4M1 (32-bit ARM Cortex-M4) with an integrated ESP32-S3 module for WiFi and Bluetooth connectivity.</p>
+                                
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <h4>Processing Power</h4>
+                                        <p>48 MHz ARM Cortex-M4<br>256 KB Flash, 32 KB SRAM</p>
+                                    </div>
+                                    <div class="spec-item">
+                                        <h4>Connectivity</h4>
+                                        <p>WiFi 802.11 b/g/n<br>Bluetooth LE 5.0</p>
+                                    </div>
+                                    <div class="spec-item">
+                                        <h4>I/O Capabilities</h4>
+                                        <p>14 Digital pins, 6 Analog<br>USB HID support</p>
+                                    </div>
+                                    <div class="spec-item">
+                                        <h4>Special Features</h4>
+                                        <p>12x8 LED Matrix<br>DAC, RTC, CAN Bus</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="concept-card">
+                                <h3><i class="fas fa-mouse"></i> Peripheral Spoofing Explained</h3>
+                                <p>Peripheral spoofing involves intercepting, modifying, or emulating input device signals. The Arduino can act as a "man-in-the-middle" or direct HID device.</p>
+                                
+                                <div class="spoofing-diagram">
+                                    <div class="diagram-flow">
+                                        <div class="flow-item">
+                                            <i class="fas fa-mouse"></i>
+                                            <span>Real Mouse</span>
+                                        </div>
+                                        <div class="flow-arrow">→</div>
+                                        <div class="flow-item highlight">
+                                            <i class="fas fa-microchip"></i>
+                                            <span>Arduino R4</span>
+                                        </div>
+                                        <div class="flow-arrow">→</div>
+                                        <div class="flow-item">
+                                            <i class="fas fa-desktop"></i>
+                                            <span>Computer</span>
+                                        </div>
+                                    </div>
+                                    <p class="diagram-caption">Arduino intercepts and can modify mouse signals</p>
+                                </div>
+
+                                <div class="use-cases">
+                                    <h4>Legitimate Use Cases:</h4>
+                                    <ul>
+                                        <li><strong>Accessibility:</strong> Custom input devices for disabled users</li>
+                                        <li><strong>Automation:</strong> Repetitive task automation</li>
+                                        <li><strong>Gaming Mods:</strong> Custom controllers and macros</li>
+                                        <li><strong>Testing:</strong> Automated UI testing and development</li>
+                                        <li><strong>Education:</strong> Learning about HID protocols</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="concept-card">
+                                <h3><i class="fas fa-wifi"></i> Why WiFi Connectivity Matters</h3>
+                                <p>The integrated WiFi capability enables wireless communication for advanced projects:</p>
+                                
+                                <div class="wifi-benefits">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-broadcast-tower"></i>
+                                        <div>
+                                            <h4>Remote Control</h4>
+                                            <p>Send commands wirelessly from PC to Arduino for real-time input modification.</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-chart-line"></i>
+                                        <div>
+                                            <h4>Data Analysis</h4>
+                                            <p>Stream mouse movement data for analysis, machine learning, or visualization.</p>
+                                        </div>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="fas fa-network-wired"></i>
+                                        <div>
+                                            <h4>Multi-Device Setup</h4>
+                                            <p>Coordinate multiple Arduinos for complex input scenarios.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-actions">
+                            <button class="btn btn-primary" onclick="completeSection('theory')">
+                                I Understand Arduino Basics <i class="fas fa-check"></i>
+                            </button>
+                            <button class="btn btn-outline" onclick="navigateToSection('ethics')">
+                                Continue to Ethics <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Ethics Section -->
+                    <section id="ethics" class="content-section">
+                        <div class="section-header">
+                            <h2><i class="fas fa-balance-scale"></i> Ethics & Legal Considerations</h2>
+                            <p>Understanding the responsible use of peripheral spoofing technology.</p>
+                        </div>
+
+                        <div class="ethics-warning">
+                            <i class="fas fa-gavel"></i>
+                            <div>
+                                <h3>Legal & Ethical Responsibility</h3>
+                                <p>This knowledge comes with responsibility. Misuse of these techniques can violate terms of service, local laws, and harm others. Always prioritize ethical learning and application.</p>
+                            </div>
+                        </div>
+
+                        <div class="ethics-content">
+                            <div class="ethics-section">
+                                <h3><i class="fas fa-thumbs-up"></i> Ethical Uses</h3>
+                                <div class="use-cases good">
+                                    <div class="use-case">
+                                        <i class="fas fa-universal-access"></i>
+                                        <div>
+                                            <h4>Accessibility Solutions</h4>
+                                            <p>Creating custom input devices for users with disabilities, enabling equal access to technology.</p>
+                                        </div>
+                                    </div>
+                                    <div class="use-case">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <div>
+                                            <h4>Educational Projects</h4>
+                                            <p>Learning about electronics, programming, and human-computer interaction principles.</p>
+                                        </div>
+                                    </div>
+                                    <div class="use-case">
+                                        <i class="fas fa-robot"></i>
+                                        <div>
+                                            <h4>Automation & Testing</h4>
+                                            <p>Automating repetitive tasks or testing user interfaces in development environments.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ethics-section">
+                                <h3><i class="fas fa-times-circle"></i> Unethical/Illegal Uses</h3>
+                                <div class="use-cases bad">
+                                    <div class="use-case">
+                                        <i class="fas fa-gamepad"></i>
+                                        <div>
+                                            <h4>Gaming Cheats</h4>
+                                            <p>Using aim assistance or automation in competitive online games violates terms of service and provides unfair advantages.</p>
+                                        </div>
+                                    </div>
+                                    <div class="use-case">
+                                        <i class="fas fa-mask"></i>
+                                        <div>
+                                            <h4>Unauthorized Access</h4>
+                                            <p>Using input spoofing to gain unauthorized access to systems or bypass security measures.</p>
+                                        </div>
+                                    </div>
+                                    <div class="use-case">
+                                        <i class="fas fa-user-secret"></i>
+                                        <div>
+                                            <h4>Malicious Automation</h4>
+                                            <p>Creating bots for fraud, spam, or other harmful automated activities.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sa-legal-context">
+                            <h3><i class="fas fa-flag"></i> South African Legal Context</h3>
+                            <div class="legal-points">
+                                <div class="legal-point">
+                                    <h4>Electronic Communications and Transactions Act (ECTA)</h4>
+                                    <p>Prohibits unauthorized access to computer systems and data. Using spoofing for unauthorized access is illegal.</p>
+                                </div>
+                                <div class="legal-point">
+                                    <h4>Protection of Personal Information Act (POPIA)</h4>
+                                    <p>Regulates collection and use of personal information. Ensure any data collection complies with POPIA.</p>
+                                </div>
+                                <div class="legal-point">
+                                    <h4>Terms of Service</h4>
+                                    <p>Many online services prohibit automation or input modification. Violating ToS can result in account bans.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ethical-commitment">
+                            <h3><i class="fas fa-handshake"></i> Ethical Learning Commitment</h3>
+                            <p>By continuing with this course, you commit to:</p>
+                            
+                            <div class="commitment-checklist">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="ethics-check" value="education">
+                                    <span class="checkmark"></span>
+                                    <span class="label-text">Using this knowledge for educational and legitimate purposes only</span>
+                                </label>
+                                
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="ethics-check" value="respect">
+                                    <span class="checkmark"></span>
+                                    <span class="label-text">Respecting the rights and property of others</span>
+                                </label>
+                                
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="ethics-check" value="legal">
+                                    <span class="checkmark"></span>
+                                    <span class="label-text">Complying with all applicable laws and terms of service</span>
+                                </label>
+                                
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="ethics-check" value="community">
+                                    <span class="checkmark"></span>
+                                    <span class="label-text">Contributing positively to the maker and Arduino community</span>
+                                </label>
+                            </div>
+                            
+                            <button id="ethics-complete-btn" class="btn btn-primary" disabled onclick="completeEthicsCheck()">
+                                I Commit to Ethical Learning <i class="fas fa-handshake"></i>
+                            </button>
+                        </div>
+
+                        <div class="section-actions">
+                            <button class="btn btn-outline" onclick="navigateToSection('theory')">
+                                <i class="fas fa-arrow-left"></i> Back to Theory
+                            </button>
+                            <button class="btn btn-outline" onclick="navigateToSection('quiz')">
+                                Continue to Knowledge Check <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Quiz Section -->
+                    <section id="quiz" class="content-section">
+                        <div class="section-header">
+                            <h2><i class="fas fa-question-circle"></i> Knowledge Check</h2>
+                            <p>Test your understanding of the key concepts from this module.</p>
+                        </div>
+
+                        <div class="quiz-container">
+                            <div class="quiz-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="quiz-progress"></div>
+                                </div>
+                                <span class="progress-text">Question <span id="current-question">1</span> of <span id="total-questions">5</span></span>
+                            </div>
+
+                            <div class="quiz-question active" data-question="1">
+                                <h3>What microcontroller does the Arduino UNO R4 WiFi use?</h3>
+                                <div class="quiz-options">
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q1" value="atmega328p">
+                                        <span class="option-text">ATmega328P</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q1" value="renesas-ra4m1">
+                                        <span class="option-text">Renesas RA4M1 (ARM Cortex-M4)</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q1" value="esp32">
+                                        <span class="option-text">ESP32</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q1" value="atmega2560">
+                                        <span class="option-text">ATmega2560</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="quiz-question" data-question="2">
+                                <h3>Which of these is an ethical use of peripheral spoofing?</h3>
+                                <div class="quiz-options">
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q2" value="gaming-cheats">
+                                        <span class="option-text">Creating aim assistance for competitive gaming</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q2" value="accessibility">
+                                        <span class="option-text">Creating custom input devices for disabled users</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q2" value="unauthorized-access">
+                                        <span class="option-text">Bypassing security systems</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q2" value="malicious-bots">
+                                        <span class="option-text">Creating spam bots</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="quiz-question" data-question="3">
+                                <h3>What is the most important safety practice when working with electronics?</h3>
+                                <div class="quiz-options">
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q3" value="speed">
+                                        <span class="option-text">Working as quickly as possible</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q3" value="esd-protection">
+                                        <span class="option-text">Using ESD protection and proper grounding</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q3" value="bright-lights">
+                                        <span class="option-text">Using bright lighting</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q3" value="expensive-tools">
+                                        <span class="option-text">Using the most expensive tools</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="quiz-question" data-question="4">
+                                <h3>In South Africa, which factor is most important when purchasing Arduino components?</h3>
+                                <div class="quiz-options">
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q4" value="cheapest-price">
+                                        <span class="option-text">Finding the cheapest price only</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q4" value="reliable-suppliers">
+                                        <span class="option-text">Using reliable suppliers to avoid fakes</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q4" value="international-only">
+                                        <span class="option-text">Only buying from international suppliers</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q4" value="brand-names">
+                                        <span class="option-text">Only buying brand-name components</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="quiz-question" data-question="5">
+                                <h3>What makes the Arduino UNO R4 WiFi particularly suitable for peripheral projects?</h3>
+                                <div class="quiz-options">
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q5" value="low-cost">
+                                        <span class="option-text">It's the cheapest Arduino board</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q5" value="wifi-hid">
+                                        <span class="option-text">Built-in WiFi and native USB HID support</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q5" value="largest-memory">
+                                        <span class="option-text">It has the most memory</span>
+                                    </label>
+                                    <label class="quiz-option">
+                                        <input type="radio" name="q5" value="fastest-processor">
+                                        <span class="option-text">It has the fastest processor</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="quiz-actions">
+                                <button class="btn btn-outline" id="quiz-prev" onclick="previousQuestion()" disabled>
+                                    <i class="fas fa-arrow-left"></i> Previous
+                                </button>
+                                <button class="btn btn-primary" id="quiz-next" onclick="nextQuestion()">
+                                    Next <i class="fas fa-arrow-right"></i>
+                                </button>
+                                <button class="btn btn-primary" id="quiz-submit" onclick="submitQuiz()" style="display: none;">
+                                    Submit Quiz <i class="fas fa-check"></i>
+                                </button>
+                            </div>
+
+                            <div class="quiz-results" id="quiz-results" style="display: none;">
+                                <div class="results-content">
+                                    <h3><i class="fas fa-trophy"></i> Quiz Results</h3>
+                                    <div class="score-display">
+                                        <div class="score-circle">
+                                            <span class="score-text" id="score-text">0%</span>
+                                        </div>
+                                        <p id="score-message">Great job!</p>
+                                    </div>
+                                    <div class="results-actions">
+                                        <button class="btn btn-primary" onclick="completeModule()">
+                                            Complete Module 1 <i class="fas fa-graduation-cap"></i>
+                                        </button>
+                                        <button class="btn btn-outline" onclick="retakeQuiz()">
+                                            Retake Quiz <i class="fas fa-redo"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="module-footer">
+        <div class="container">
+            <div class="footer-nav">
+                <a href="../index.html" class="btn btn-outline">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+                <a href="module-2.html" class="btn btn-primary">
+                    Next: Module 2 - Hardware & Suppliers <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-arduino.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/module.js"></script>
+</body>
+</html>

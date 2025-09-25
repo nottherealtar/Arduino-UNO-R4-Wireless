@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: Hardware & Suppliers - Arduino UNO R4 WiFi Journey</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/module.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="module-header">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">›</span>
+                <a href="../modules/">Modules</a>
+                <span class="separator">›</span>
+                <span class="current">Module 2: Hardware & Suppliers</span>
+            </nav>
+            
+            <div class="module-title-section">
+                <div class="module-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="module-info">
+                    <h1>Module 2: Hardware & Suppliers</h1>
+                    <p class="module-description">Navigate South African electronics supply chains like a pro</p>
+                    <div class="module-meta">
+                        <span class="difficulty beginner"><i class="fas fa-seedling"></i> Beginner</span>
+                        <span class="duration"><i class="fas fa-clock"></i> ~2 hours</span>
+                        <span class="progress-indicator">
+                            <i class="fas fa-chart-line"></i> 
+                            <span id="module-progress">0%</span> Complete
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="module-content">
+        <div class="container">
+            <div class="coming-soon-wrapper">
+                <div class="coming-soon-content">
+                    <i class="fas fa-hammer"></i>
+                    <h2>Module 2 is Under Construction</h2>
+                    <p>We're building an amazing experience that includes:</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-preview">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>SA Supplier Database</h3>
+                            <p>Interactive map of trusted Arduino suppliers across South Africa with real-time stock and pricing.</p>
+                        </div>
+                        
+                        <div class="feature-preview">
+                            <i class="fas fa-calculator"></i>
+                            <h3>Cost Calculator</h3>
+                            <p>Calculate total project costs including components, shipping, duties, and exchange rates.</p>
+                        </div>
+                        
+                        <div class="feature-preview">
+                            <i class="fas fa-magic"></i>
+                            <h3>Hardware Wizard</h3>
+                            <p>Get personalized component recommendations based on your project goals and experience level.</p>
+                        </div>
+                        
+                        <div class="feature-preview">
+                            <i class="fas fa-truck"></i>
+                            <h3>Import Guide</h3>
+                            <p>Navigate SARS duties, shipping options, and avoid counterfeit components.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="preview-timeline">
+                        <h3>Expected Completion: Early 2024</h3>
+                        <p>Meanwhile, you can explore the existing supplier information in the original documentation below.</p>
+                    </div>
+                    
+                    <div class="temp-content">
+                        <h3>Quick Supplier Reference</h3>
+                        <div class="supplier-cards">
+                            <div class="supplier-card">
+                                <h4>RS Components SA</h4>
+                                <p>Official Arduino distributor</p>
+                                <div class="supplier-details">
+                                    <span class="price">Arduino UNO R4 WiFi: ~R800</span>
+                                    <span class="delivery">Next-day delivery in major cities</span>
+                                </div>
+                                <a href="https://za.rs-online.com" target="_blank" class="btn btn-outline btn-small">Visit Site</a>
+                            </div>
+                            
+                            <div class="supplier-card">
+                                <h4>Communica</h4>
+                                <p>Wide component range</p>
+                                <div class="supplier-details">
+                                    <span class="price">Arduino UNO R4 WiFi: ~R795</span>
+                                    <span class="delivery">PostNet delivery nationwide</span>
+                                </div>
+                                <a href="https://communica.co.za" target="_blank" class="btn btn-outline btn-small">Visit Site</a>
+                            </div>
+                            
+                            <div class="supplier-card">
+                                <h4>Mantech Electronics</h4>
+                                <p>Affordable alternatives</p>
+                                <div class="supplier-details">
+                                    <span class="price">Arduino clones: ~R400</span>
+                                    <span class="delivery">Pickup in JHB, CPT, DBN</span>
+                                </div>
+                                <a href="https://mantech.co.za" target="_blank" class="btn btn-outline btn-small">Visit Site</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="module-footer">
+        <div class="container">
+            <div class="footer-nav">
+                <a href="module-1.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> Previous: Module 1
+                </a>
+                <a href="module-3.html" class="btn btn-secondary">
+                    Next: Module 3 - Setup <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .coming-soon-wrapper {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .coming-soon-content i {
+            font-size: 4rem;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+        }
+        
+        .coming-soon-content h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .feature-preview {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .feature-preview i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .feature-preview h3 {
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+        
+        .preview-timeline {
+            background: rgba(243, 156, 18, 0.1);
+            border: 2px solid var(--accent-color);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 40px 0;
+        }
+        
+        .temp-content {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .supplier-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .supplier-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .supplier-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+        
+        .supplier-details {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+        
+        .price {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
+        .delivery {
+            color: var(--text-muted);
+        }
+    </style>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

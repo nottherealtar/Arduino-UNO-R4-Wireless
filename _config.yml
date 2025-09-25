@@ -1,0 +1,89 @@
+# GitHub Pages Configuration for Arduino UNO R4 WiFi Journey
+
+title: "Arduino UNO R4 WiFi Journey"
+description: "Interactive DIY Guide for Arduino UNO R4 WiFi Peripheral Projects in South Africa"
+baseurl: ""
+url: "https://nottherealtar.github.io/Arduino-UNO-R4-Wireless"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  modules:
+    output: true
+    permalink: /:collection/:name/
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "modules"
+    values:
+      layout: "module"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Site settings
+author: "Arduino UNO R4 WiFi Journey"
+email: "info@arduino-journey.co.za"
+lang: "en-ZA"
+timezone: "Africa/Johannesburg"
+
+# Social links
+github_username: nottherealtar
+repository: nottherealtar/Arduino-UNO-R4-Wireless
+
+# Navigation
+nav_links:
+  - title: "Home"
+    url: "/"
+  - title: "Modules"
+    url: "/modules/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "Suppliers"
+    url: "/suppliers.html"
+  - title: "Community"
+    url: "/community.html"
+
+# Features
+features:
+  - interactive_learning: true
+  - sa_specific_content: true
+  - progressive_difficulty: true
+  - hands_on_projects: true
+  - cost_calculator: true
+  - supplier_database: true
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .github
