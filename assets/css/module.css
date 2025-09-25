@@ -223,10 +223,15 @@
 
 .checklist-item.completed {
     color: var(--success-color);
+    font-weight: 600;
 }
 
 .checklist-item.completed i {
     color: var(--success-color);
+}
+
+.checklist-item.completed i:before {
+    content: "\f058" !important; /* Force check-circle icon */
 }
 
 .help-card p {
