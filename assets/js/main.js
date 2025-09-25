@@ -368,7 +368,7 @@ function openTool(toolType) {
             title: 'Hardware Selection Wizard',
             url: 'tools/hardware-wizard.html',
             description: 'Get personalized hardware recommendations based on your needs',
-            available: false
+            available: true
         },
         'supplier-finder': {
             title: 'SA Supplier Finder',
