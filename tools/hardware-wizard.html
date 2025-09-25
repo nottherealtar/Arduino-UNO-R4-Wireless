@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Selection Wizard - Arduino UNO R4 WiFi Journey</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/tools.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="tool-page">
+    <header class="tool-header">
+        <div class="container">
+            <div class="tool-nav">
+                <a href="../index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Journey
+                </a>
+                <h1><i class="fas fa-magic"></i> Hardware Selection Wizard</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="tool-content">
+        <div class="container">
+            <div class="tool-intro">
+                <p>Get personalized hardware recommendations based on your experience level, budget, and project goals. 
+                   This wizard will guide you through selecting the perfect components for your Arduino UNO R4 WiFi journey.</p>
+            </div>
+
+            <div class="wizard-container">
+                <!-- Progress Indicator -->
+                <div class="wizard-progress" id="wizard-progress">
+                    <div class="wizard-step active" data-step="1">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="wizard-step" data-step="2">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="wizard-step" data-step="3">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="wizard-step" data-step="4">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="wizard-step" data-step="5">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                </div>
+
+                <!-- Step Content -->
+                <div class="wizard-content" id="wizard-content">
+                    <!-- Step 1: Experience Level -->
+                    <div class="wizard-step-content active" data-step="1">
+                        <h2><i class="fas fa-user"></i> What's your Arduino experience level?</h2>
+                        <p>This helps us recommend components that match your skill level and provide appropriate guidance.</p>
+                        
+                        <div class="option-grid">
+                            <div class="option-card" data-value="beginner">
+                                <i class="fas fa-seedling"></i>
+                                <h4>Complete Beginner</h4>
+                                <p>Never used Arduino before. Want to start with the basics and learn step by step.</p>
+                                <ul>
+                                    <li>Basic LED projects</li>
+                                    <li>Simple sensor readings</li>
+                                    <li>Guided tutorials</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="option-card" data-value="intermediate">
+                                <i class="fas fa-cogs"></i>
+                                <h4>Some Experience</h4>
+                                <p>Used Arduino before or have basic electronics knowledge. Ready for moderate complexity.</p>
+                                <ul>
+                                    <li>Multiple sensors</li>
+                                    <li>Motor control</li>
+                                    <li>WiFi connectivity</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="option-card" data-value="advanced">
+                                <i class="fas fa-rocket"></i>
+                                <h4>Advanced User</h4>
+                                <p>Experienced with microcontrollers. Looking for advanced projects and custom solutions.</p>
+                                <ul>
+                                    <li>Complex integrations</li>
+                                    <li>Custom protocols</li>
+                                    <li>Professional projects</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Project Goals -->
+                    <div class="wizard-step-content" data-step="2">
+                        <h2><i class="fas fa-bullseye"></i> What do you want to build?</h2>
+                        <p>Select your primary project goals. You can choose multiple options.</p>
+                        
+                        <div class="option-grid">
+                            <div class="option-card multi-select" data-value="home-automation">
+                                <i class="fas fa-home"></i>
+                                <h4>Home Automation</h4>
+                                <p>Smart switches, lighting control, temperature monitoring</p>
+                            </div>
+                            
+                            <div class="option-card multi-select" data-value="sensors-monitoring">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Sensor Monitoring</h4>
+                                <p>Environmental data, weather stations, data logging</p>
+                            </div>
+                            
+                            <div class="option-card multi-select" data-value="robotics">
+                                <i class="fas fa-robot"></i>
+                                <h4>Robotics</h4>
+                                <p>Motors, servos, movement control, autonomous systems</p>
+                            </div>
+                            
+                            <div class="option-card multi-select" data-value="iot-connectivity">
+                                <i class="fas fa-wifi"></i>
+                                <h4>IoT & Connectivity</h4>
+                                <p>WiFi projects, remote monitoring, cloud integration</p>
+                            </div>
+                            
+                            <div class="option-card multi-select" data-value="security">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Security Systems</h4>
+                                <p>Motion detection, cameras, access control, alarms</p>
+                            </div>
+                            
+                            <div class="option-card multi-select" data-value="learning">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h4>Learning & Education</h4>
+                                <p>Experiment, understand concepts, educational projects</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Budget -->
+                    <div class="wizard-step-content" data-step="3">
+                        <h2><i class="fas fa-money-bill-wave"></i> What's your budget?</h2>
+                        <p>Help us recommend components within your price range (South African Rand).</p>
+                        
+                        <div class="option-grid">
+                            <div class="option-card" data-value="budget-low">
+                                <i class="fas fa-coins"></i>
+                                <h4>Starter Budget</h4>
+                                <p><strong>R500 - R1,000</strong></p>
+                                <p>Essential components to get started with basic projects</p>
+                                <ul>
+                                    <li>Arduino board</li>
+                                    <li>Basic components</li>
+                                    <li>Starter accessories</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="option-card" data-value="budget-medium">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <h4>Hobbyist Budget</h4>
+                                <p><strong>R1,000 - R2,500</strong></p>
+                                <p>Good selection of sensors and actuators for diverse projects</p>
+                                <ul>
+                                    <li>Multiple sensors</li>
+                                    <li>Motors & servos</li>
+                                    <li>Display modules</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="option-card" data-value="budget-high">
+                                <i class="fas fa-gem"></i>
+                                <h4>Professional Budget</h4>
+                                <p><strong>R2,500+</strong></p>
+                                <p>Premium components and comprehensive toolkit for advanced projects</p>
+                                <ul>
+                                    <li>Professional sensors</li>
+                                    <li>Advanced modules</li>
+                                    <li>Complete toolkit</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Preferences -->
+                    <div class="wizard-step-content" data-step="4">
+                        <h2><i class="fas fa-cogs"></i> Additional Preferences</h2>
+                        <p>Fine-tune your recommendations with these preferences.</p>
+                        
+                        <div class="question-group">
+                            <h3>Power Source Preference</h3>
+                            <div class="option-grid">
+                                <div class="option-card multi-select" data-value="usb-power">
+                                    <i class="fas fa-usb"></i>
+                                    <h4>USB Powered</h4>
+                                    <p>Connect to computer or USB adapter</p>
+                                </div>
+                                
+                                <div class="option-card multi-select" data-value="battery-power">
+                                    <i class="fas fa-battery-full"></i>
+                                    <h4>Battery Powered</h4>
+                                    <p>Portable projects with battery packs</p>
+                                </div>
+                                
+                                <div class="option-card multi-select" data-value="wall-power">
+                                    <i class="fas fa-plug"></i>
+                                    <h4>Wall Adapter</h4>
+                                    <p>Permanent installations with AC adapter</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Project Environment</h3>
+                            <div class="option-grid">
+                                <div class="option-card multi-select" data-value="indoor">
+                                    <i class="fas fa-home"></i>
+                                    <h4>Indoor Projects</h4>
+                                    <p>Controlled environment, room temperature</p>
+                                </div>
+                                
+                                <div class="option-card multi-select" data-value="outdoor">
+                                    <i class="fas fa-sun"></i>
+                                    <h4>Outdoor Projects</h4>
+                                    <p>Weather-resistant, temperature variations</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <h3>Soldering Experience</h3>
+                            <div class="option-grid">
+                                <div class="option-card" data-value="no-solder">
+                                    <i class="fas fa-times-circle"></i>
+                                    <h4>No Soldering</h4>
+                                    <p>Breadboard and plug-in components only</p>
+                                </div>
+                                
+                                <div class="option-card" data-value="basic-solder">
+                                    <i class="fas fa-check-circle"></i>
+                                    <h4>Basic Soldering</h4>
+                                    <p>Simple soldering for headers and connections</p>
+                                </div>
+                                
+                                <div class="option-card" data-value="advanced-solder">
+                                    <i class="fas fa-fire"></i>
+                                    <h4>Advanced Soldering</h4>
+                                    <p>SMD components and complex assemblies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Recommendations -->
+                    <div class="wizard-step-content" data-step="5">
+                        <h2><i class="fas fa-magic"></i> Your Personalized Recommendations</h2>
+                        <p>Based on your answers, here are our recommendations:</p>
+                        
+                        <div id="recommendations-content">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="wizard-actions">
+                    <button class="btn btn-outline" id="prev-btn" style="display: none;">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    
+                    <div class="wizard-info">
+                        <span id="step-indicator">Step 1 of 5</span>
+                    </div>
+                    
+                    <button class="btn btn-primary" id="next-btn" disabled>
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/tools-common.js"></script>
+    <script src="../assets/js/hardware-wizard.js"></script>
+</body>
+</html>
