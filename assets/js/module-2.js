@@ -594,12 +594,22 @@ function updateImportCalculatorPreview() {
 }
 
 function calculateImportCosts() {
-    const { itemValue, shippingCost, exchangeRate } = Module2State.importCalculatorData;
+    // Get values directly from DOM elements and parse them
+    const itemValueInput = document.getElementById('item-value');
+    const shippingCostInput = document.getElementById('shipping-cost');
+    const exchangeRateInput = document.getElementById('exchange-rate');
     
-    if (itemValue <= 0) {
-        showToast('Please enter a valid item value', 'warning');
+    const itemValue = parseFloat(itemValueInput.value);
+    const shippingCost = parseFloat(shippingCostInput.value) || 0;
+    const exchangeRate = parseFloat(exchangeRateInput.value) || 18.50;
+    
+    if (isNaN(itemValue) || itemValue <= 0) {
+        showToast('Please enter a valid item value greater than 0', 'warning');
         return;
     }
+    
+    // Update state
+    Module2State.importCalculatorData = { itemValue, shippingCost, exchangeRate };
     
     // Convert to ZAR
     const itemValueZAR = itemValue * exchangeRate;
