@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Arduino UNO R4 WiFi Journey - South Africa</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">
+                <i class="fas fa-microchip"></i>
+                Arduino UNO R4 WiFi Journey
+            </h1>
+            <p class="hero-subtitle">Your Interactive DIY Guide to Peripheral Projects in South Africa</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Learning Modules</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Hands-on Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">SA</span>
+                    <span class="stat-label">Localized Content</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="progress-nav">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="module-indicators">
+                <div class="module-indicator active" data-module="1">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Start</span>
+                </div>
+                <div class="module-indicator" data-module="2">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Hardware</span>
+                </div>
+                <div class="module-indicator" data-module="3">
+                    <i class="fas fa-tools"></i>
+                    <span>Setup</span>
+                </div>
+                <div class="module-indicator" data-module="4">
+                    <i class="fas fa-code"></i>
+                    <span>Code</span>
+                </div>
+                <div class="module-indicator" data-module="5">
+                    <i class="fas fa-rocket"></i>
+                    <span>Projects</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Quick Start Section -->
+            <section class="quick-start">
+                <h2><i class="fas fa-bolt"></i> Quick Start Path</h2>
+                <div class="path-selector">
+                    <div class="path-card" onclick="selectPath('beginner')">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Complete Beginner</h3>
+                        <p>Never touched Arduino? Start here with basics, safety, and simple projects.</p>
+                        <span class="duration">~40 hours</span>
+                    </div>
+                    <div class="path-card" onclick="selectPath('intermediate')">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Some Experience</h3>
+                        <p>Know basic electronics? Jump to hardware selection and advanced projects.</p>
+                        <span class="duration">~20 hours</span>
+                    </div>
+                    <div class="path-card" onclick="selectPath('advanced')">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Ready for Projects</h3>
+                        <p>Familiar with Arduino? Go straight to peripheral spoofing techniques.</p>
+                        <span class="duration">~10 hours</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learning Modules -->
+            <section class="learning-modules">
+                <h2><i class="fas fa-map"></i> Your Learning Journey</h2>
+                <div class="modules-grid">
+                    <div class="module-card" data-module="1">
+                        <div class="module-header">
+                            <i class="fas fa-play-circle"></i>
+                            <h3>Module 1: Getting Started</h3>
+                            <span class="difficulty beginner">Beginner</span>
+                        </div>
+                        <p>Arduino basics, safety guidelines, and understanding peripheral spoofing concepts.</p>
+                        <div class="module-features">
+                            <span class="feature"><i class="fas fa-shield-alt"></i> Safety First</span>
+                            <span class="feature"><i class="fas fa-book"></i> Theory</span>
+                            <span class="feature"><i class="fas fa-balance-scale"></i> Ethics</span>
+                        </div>
+                        <a href="modules/module-1.html" class="btn btn-primary">Start Module</a>
+                    </div>
+
+                    <div class="module-card" data-module="2">
+                        <div class="module-header">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>Module 2: Hardware & Suppliers</h3>
+                            <span class="difficulty beginner">Beginner</span>
+                        </div>
+                        <p>South African suppliers, cost calculator, and hardware selection wizard.</p>
+                        <div class="module-features">
+                            <span class="feature"><i class="fas fa-map-marker-alt"></i> SA Suppliers</span>
+                            <span class="feature"><i class="fas fa-calculator"></i> Cost Tool</span>
+                            <span class="feature"><i class="fas fa-magic"></i> Selection Wizard</span>
+                        </div>
+                        <a href="modules/module-2.html" class="btn btn-secondary">Coming Soon</a>
+                    </div>
+
+                    <div class="module-card" data-module="3">
+                        <div class="module-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>Module 3: Setup & Installation</h3>
+                            <span class="difficulty intermediate">Intermediate</span>
+                        </div>
+                        <p>Step-by-step Arduino IDE setup, firmware flashing, and hardware assembly.</p>
+                        <div class="module-features">
+                            <span class="feature"><i class="fas fa-download"></i> Software</span>
+                            <span class="feature"><i class="fas fa-wrench"></i> Assembly</span>
+                            <span class="feature"><i class="fas fa-microchip"></i> Firmware</span>
+                        </div>
+                        <a href="modules/module-3.html" class="btn btn-secondary">Coming Soon</a>
+                    </div>
+
+                    <div class="module-card" data-module="4">
+                        <div class="module-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Module 4: Programming Basics</h3>
+                            <span class="difficulty intermediate">Intermediate</span>
+                        </div>
+                        <p>Interactive coding tutorials, WiFi communication, and HID emulation.</p>
+                        <div class="module-features">
+                            <span class="feature"><i class="fas fa-wifi"></i> WiFi Code</span>
+                            <span class="feature"><i class="fas fa-mouse"></i> HID Control</span>
+                            <span class="feature"><i class="fas fa-play"></i> Live Examples</span>
+                        </div>
+                        <a href="modules/module-4.html" class="btn btn-secondary">Coming Soon</a>
+                    </div>
+
+                    <div class="module-card" data-module="5">
+                        <div class="module-header">
+                            <i class="fas fa-project-diagram"></i>
+                            <h3>Module 5: Advanced Projects</h3>
+                            <span class="difficulty advanced">Advanced</span>
+                        </div>
+                        <p>Real-world projects, troubleshooting for SA conditions, and community contributions.</p>
+                        <div class="module-features">
+                            <span class="feature"><i class="fas fa-thermometer-half"></i> SA Climate</span>
+                            <span class="feature"><i class="fas fa-bug"></i> Debug Guide</span>
+                            <span class="feature"><i class="fas fa-users"></i> Community</span>
+                        </div>
+                        <a href="modules/module-5.html" class="btn btn-secondary">Coming Soon</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tools Section -->
+            <section class="interactive-tools">
+                <h2><i class="fas fa-magic"></i> Interactive Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card" onclick="openTool('cost-calculator')">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Cost Calculator</h3>
+                        <p>Calculate project costs with current SA market prices</p>
+                    </div>
+                    <div class="tool-card" onclick="openTool('hardware-wizard')">
+                        <i class="fas fa-magic"></i>
+                        <h3>Hardware Wizard</h3>
+                        <p>Get personalized hardware recommendations</p>
+                    </div>
+                    <div class="tool-card" onclick="openTool('supplier-finder')">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Supplier Finder</h3>
+                        <p>Find trusted suppliers near you in South Africa</p>
+                    </div>
+                    <div class="tool-card" onclick="openTool('code-playground')">
+                        <i class="fas fa-code"></i>
+                        <h3>Code Playground</h3>
+                        <p>Test and experiment with Arduino code online</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Safety Notice -->
+            <section class="safety-notice">
+                <div class="notice-content">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <h3>Important Safety & Legal Notice</h3>
+                        <p>This educational content is for learning purposes only. Always follow safety guidelines and respect legal boundaries. Using these techniques inappropriately may violate terms of service and laws.</p>
+                    </div>
+                    <a href="safety-guidelines.html" class="btn btn-outline">Safety Guidelines</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Learning Resources</h4>
+                    <ul>
+                        <li><a href="modules/">All Modules</a></li>
+                        <li><a href="projects/">Example Projects</a></li>
+                        <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>South African Context</h4>
+                    <ul>
+                        <li><a href="suppliers.html">Local Suppliers</a></li>
+                        <li><a href="community.html">SA Arduino Community</a></li>
+                        <li><a href="shipping.html">Import Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Safety & Ethics</h4>
+                    <ul>
+                        <li><a href="safety-guidelines.html">Safety Guidelines</a></li>
+                        <li><a href="ethics.html">Ethical Considerations</a></li>
+                        <li><a href="legal.html">Legal Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Arduino UNO R4 WiFi Journey. Educational content for responsible learning.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
