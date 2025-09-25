@@ -39,79 +39,474 @@
         </div>
     </header>
 
+    <!-- Module Navigation Pills -->
+    <div class="module-nav">
+        <div class="container">
+            <div class="nav-pills">
+                <button class="nav-pill active" data-section="overview">
+                    <i class="fas fa-eye"></i> Overview
+                </button>
+                <button class="nav-pill" data-section="suppliers">
+                    <i class="fas fa-store"></i> SA Suppliers
+                </button>
+                <button class="nav-pill" data-section="comparison">
+                    <i class="fas fa-balance-scale"></i> Compare
+                </button>
+                <button class="nav-pill" data-section="import-guide">
+                    <i class="fas fa-truck"></i> Import Guide
+                </button>
+                <button class="nav-pill" data-section="tools">
+                    <i class="fas fa-tools"></i> Interactive Tools
+                </button>
+            </div>
+        </div>
+    </div>
+
     <main class="module-content">
         <div class="container">
-            <div class="coming-soon-wrapper">
-                <div class="coming-soon-content">
-                    <i class="fas fa-hammer"></i>
-                    <h2>Module 2 is Under Construction</h2>
-                    <p>We're building an amazing experience that includes:</p>
-                    
-                    <div class="features-grid">
-                        <div class="feature-preview">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h3>SA Supplier Database</h3>
-                            <p>Interactive map of trusted Arduino suppliers across South Africa with real-time stock and pricing.</p>
+            <div class="content-wrapper">
+                <!-- Sidebar with progress -->
+                <aside class="module-sidebar">
+                    <div class="progress-card">
+                        <h3><i class="fas fa-chart-line"></i> Your Progress</h3>
+                        <div class="progress-ring">
+                            <svg width="80" height="80">
+                                <circle class="progress-ring-background" cx="40" cy="40" r="36" />
+                                <circle class="progress-circle" cx="40" cy="40" r="36" />
+                            </svg>
+                            <div class="progress-text">0%</div>
                         </div>
                         
-                        <div class="feature-preview">
-                            <i class="fas fa-calculator"></i>
-                            <h3>Cost Calculator</h3>
-                            <p>Calculate total project costs including components, shipping, duties, and exchange rates.</p>
-                        </div>
-                        
-                        <div class="feature-preview">
-                            <i class="fas fa-magic"></i>
-                            <h3>Hardware Wizard</h3>
-                            <p>Get personalized component recommendations based on your project goals and experience level.</p>
-                        </div>
-                        
-                        <div class="feature-preview">
-                            <i class="fas fa-truck"></i>
-                            <h3>Import Guide</h3>
-                            <p>Navigate SARS duties, shipping options, and avoid counterfeit components.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="preview-timeline">
-                        <h3>Expected Completion: Early 2024</h3>
-                        <p>Meanwhile, you can explore the existing supplier information in the original documentation below.</p>
-                    </div>
-                    
-                    <div class="temp-content">
-                        <h3>Quick Supplier Reference</h3>
-                        <div class="supplier-cards">
-                            <div class="supplier-card">
-                                <h4>RS Components SA</h4>
-                                <p>Official Arduino distributor</p>
-                                <div class="supplier-details">
-                                    <span class="price">Arduino UNO R4 WiFi: ~R800</span>
-                                    <span class="delivery">Next-day delivery in major cities</span>
-                                </div>
-                                <a href="https://za.rs-online.com" target="_blank" class="btn btn-outline btn-small">Visit Site</a>
+                        <div class="progress-checklist">
+                            <div class="checklist-item" data-item="overview">
+                                <i class="fas fa-circle"></i>
+                                <span>Module Overview</span>
                             </div>
-                            
-                            <div class="supplier-card">
-                                <h4>Communica</h4>
-                                <p>Wide component range</p>
-                                <div class="supplier-details">
-                                    <span class="price">Arduino UNO R4 WiFi: ~R795</span>
-                                    <span class="delivery">PostNet delivery nationwide</span>
-                                </div>
-                                <a href="https://communica.co.za" target="_blank" class="btn btn-outline btn-small">Visit Site</a>
+                            <div class="checklist-item" data-item="suppliers">
+                                <i class="fas fa-circle"></i>
+                                <span>SA Suppliers</span>
                             </div>
-                            
-                            <div class="supplier-card">
-                                <h4>Mantech Electronics</h4>
-                                <p>Affordable alternatives</p>
-                                <div class="supplier-details">
-                                    <span class="price">Arduino clones: ~R400</span>
-                                    <span class="delivery">Pickup in JHB, CPT, DBN</span>
-                                </div>
-                                <a href="https://mantech.co.za" target="_blank" class="btn btn-outline btn-small">Visit Site</a>
+                            <div class="checklist-item" data-item="comparison">
+                                <i class="fas fa-circle"></i>
+                                <span>Compare Options</span>
+                            </div>
+                            <div class="checklist-item" data-item="import-guide">
+                                <i class="fas fa-circle"></i>
+                                <span>Import Guide</span>
+                            </div>
+                            <div class="checklist-item" data-item="tools">
+                                <i class="fas fa-circle"></i>
+                                <span>Use Tools</span>
                             </div>
                         </div>
                     </div>
+
+                    <div class="help-card">
+                        <h4><i class="fas fa-question-circle"></i> Need Help?</h4>
+                        <p>Struggling with supplier selection? Our SA community can help!</p>
+                        <a href="#" class="btn btn-outline btn-small">Join Community</a>
+                    </div>
+                </aside>
+
+                <!-- Main content sections -->
+                <div class="module-main">
+                    <!-- Overview Section -->
+                    <section id="overview" class="content-section active">
+                        <div class="section-header">
+                            <h2>Hardware & Suppliers Overview</h2>
+                            <p>Navigate South Africa's electronics supply chains like a pro and build cost-effective Arduino projects.</p>
+                        </div>
+
+                        <div class="section-content">
+                            <div class="two-column">
+                                <div class="column">
+                                    <h3><i class="fas fa-bullseye"></i> What You'll Master</h3>
+                                    <ul>
+                                        <li>▸ Find reliable South African Arduino suppliers</li>
+                                        <li>▸ Calculate total project costs with import duties</li>
+                                        <li>▸ Compare suppliers for best value and quality</li>
+                                        <li>▸ Navigate SARS import regulations</li>
+                                        <li>▸ Avoid counterfeit components</li>
+                                        <li>▸ Plan for SA-specific challenges (power, shipping)</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <h3><i class="fas fa-clock"></i> Time Investment</h3>
+                                    <div class="time-breakdown">
+                                        <div class="time-item">
+                                            <span class="time-label">Supplier Research:</span>
+                                            <span class="time-value">45 mins</span>
+                                        </div>
+                                        <div class="time-item">
+                                            <span class="time-label">Cost Calculations:</span>
+                                            <span class="time-value">30 mins</span>
+                                        </div>
+                                        <div class="time-item">
+                                            <span class="time-label">Import Guidelines:</span>
+                                            <span class="time-value">30 mins</span>
+                                        </div>
+                                        <div class="time-item">
+                                            <span class="time-label">Hands-on Tools:</span>
+                                            <span class="time-value">15 mins</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sa-context-banner">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>South African Arduino Reality</h4>
+                                    <p>Import duties, shipping costs, and supplier reliability are critical factors for SA makers. This module addresses real challenges like load shedding impacts, currency fluctuations, and getting quality components without breaking the bank.</p>
+                                </div>
+                            </div>
+
+                            <div class="quick-tools-preview">
+                                <h3><i class="fas fa-rocket"></i> Quick Tools Access</h3>
+                                <div class="tools-grid">
+                                    <a href="../tools/cost-calculator.html" class="tool-preview-card">
+                                        <i class="fas fa-calculator"></i>
+                                        <h4>Cost Calculator</h4>
+                                        <p>Calculate exact project costs with SA pricing</p>
+                                    </a>
+                                    <a href="../tools/hardware-wizard.html" class="tool-preview-card">
+                                        <i class="fas fa-magic"></i>
+                                        <h4>Hardware Wizard</h4>
+                                        <p>Get personalized component recommendations</p>
+                                    </a>
+                                    <a href="../tools/supplier-finder.html" class="tool-preview-card">
+                                        <i class="fas fa-search"></i>
+                                        <h4>Supplier Finder</h4>
+                                        <p>Find trusted suppliers in your area</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-actions">
+                            <button class="btn btn-primary" onclick="completeSection('overview')">
+                                Mark as Complete <i class="fas fa-check"></i>
+                            </button>
+                            <button class="btn btn-outline" onclick="navigateToSection('suppliers')">
+                                Continue to Suppliers <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- SA Suppliers Section -->
+                    <section id="suppliers" class="content-section">
+                        <div class="section-header">
+                            <h2>South African Arduino Suppliers</h2>
+                            <p>Discover trusted suppliers with detailed analysis of pricing, shipping, and reliability.</p>
+                        </div>
+
+                        <div class="section-content">
+                            <div class="supplier-filters">
+                                <div class="filter-group">
+                                    <label>Filter by Province:</label>
+                                    <select id="province-filter">
+                                        <option value="all">All Provinces</option>
+                                        <option value="gauteng">Gauteng</option>
+                                        <option value="western-cape">Western Cape</option>
+                                        <option value="kzn">KwaZulu-Natal</option>
+                                        <option value="eastern-cape">Eastern Cape</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label>Sort by:</label>
+                                    <select id="sort-filter">
+                                        <option value="rating">Rating</option>
+                                        <option value="price">Price</option>
+                                        <option value="shipping">Shipping Cost</option>
+                                        <option value="stock">Stock Availability</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-outline" onclick="resetFilters()">Reset Filters</button>
+                            </div>
+
+                            <div class="suppliers-grid" id="suppliers-grid">
+                                <!-- Suppliers will be populated by JavaScript -->
+                            </div>
+
+                            <div class="supplier-comparison-tool">
+                                <h3><i class="fas fa-balance-scale"></i> Quick Comparison</h3>
+                                <p>Select up to 3 suppliers to compare side-by-side:</p>
+                                <div id="comparison-preview">
+                                    <p class="text-muted">Select suppliers above to see comparison</p>
+                                </div>
+                                <button class="btn btn-primary" id="compare-btn" disabled onclick="showDetailedComparison()">
+                                    Compare Selected <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="section-actions">
+                            <button class="btn btn-outline" onclick="navigateToSection('overview')">
+                                <i class="fas fa-arrow-left"></i> Back to Overview
+                            </button>
+                            <button class="btn btn-primary" onclick="completeSection('suppliers')">
+                                Complete Suppliers Review <i class="fas fa-check"></i>
+                            </button>
+                            <button class="btn btn-outline" onclick="navigateToSection('comparison')">
+                                Continue to Comparison <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Comparison Section -->
+                    <section id="comparison" class="content-section">
+                        <div class="section-header">
+                            <h2>Supplier Comparison</h2>
+                            <p>Side-by-side analysis of pricing, shipping, and service quality.</p>
+                        </div>
+
+                        <div class="section-content">
+                            <div class="comparison-container" id="comparison-container">
+                                <div class="comparison-placeholder">
+                                    <i class="fas fa-balance-scale"></i>
+                                    <h3>Select suppliers to compare</h3>
+                                    <p>Go back to the Suppliers section and select 2-3 suppliers for detailed comparison.</p>
+                                    <button class="btn btn-outline" onclick="navigateToSection('suppliers')">
+                                        Select Suppliers <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-actions">
+                            <button class="btn btn-outline" onclick="navigateToSection('suppliers')">
+                                <i class="fas fa-arrow-left"></i> Back to Suppliers
+                            </button>
+                            <button class="btn btn-primary" onclick="completeSection('comparison')">
+                                Complete Comparison <i class="fas fa-check"></i>
+                            </button>
+                            <button class="btn btn-outline" onclick="navigateToSection('import-guide')">
+                                Continue to Import Guide <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Import Guide Section -->
+                    <section id="import-guide" class="content-section">
+                        <div class="section-header">
+                            <h2>South African Import Guide</h2>
+                            <p>Navigate SARS regulations, duties, and shipping options for Arduino components.</p>
+                        </div>
+
+                        <div class="section-content">
+                            <div class="import-calculator">
+                                <h3><i class="fas fa-calculator"></i> SARS Duty Calculator</h3>
+                                <div class="calculator-form">
+                                    <div class="form-group">
+                                        <label for="item-value">Item Value (USD):</label>
+                                        <input type="number" id="item-value" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="shipping-cost">Shipping Cost (USD):</label>
+                                        <input type="number" id="shipping-cost" placeholder="0.00" min="0" step="0.01">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exchange-rate">USD/ZAR Rate:</label>
+                                        <input type="number" id="exchange-rate" placeholder="18.50" min="1" step="0.01" value="18.50">
+                                    </div>
+                                    <button class="btn btn-primary" onclick="calculateImportCosts()">
+                                        Calculate Total Cost <i class="fas fa-calculator"></i>
+                                    </button>
+                                </div>
+                                
+                                <div class="calculation-results" id="import-results" style="display: none;">
+                                    <h4>Import Cost Breakdown</h4>
+                                    <div class="cost-breakdown">
+                                        <div class="cost-item">
+                                            <span>Item Value (ZAR):</span>
+                                            <span id="item-value-zar">R0.00</span>
+                                        </div>
+                                        <div class="cost-item">
+                                            <span>Shipping (ZAR):</span>
+                                            <span id="shipping-zar">R0.00</span>
+                                        </div>
+                                        <div class="cost-item">
+                                            <span>Import Duty (15%):</span>
+                                            <span id="duty-amount">R0.00</span>
+                                        </div>
+                                        <div class="cost-item">
+                                            <span>VAT (15%):</span>
+                                            <span id="vat-amount">R0.00</span>
+                                        </div>
+                                        <div class="cost-item total">
+                                            <span>Total Cost:</span>
+                                            <span id="total-cost">R0.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="import-guides">
+                                <div class="guide-section">
+                                    <h3><i class="fas fa-file-alt"></i> SARS Import Guidelines</h3>
+                                    <div class="guideline-cards">
+                                        <div class="guideline-card">
+                                            <h4>Duty-Free Threshold</h4>
+                                            <p>Items under <strong>R500</strong> are typically duty-free, but still subject to VAT if over R50.</p>
+                                        </div>
+                                        <div class="guideline-card">
+                                            <h4>Electronics Import Duty</h4>
+                                            <p>Arduino boards and electronic components are subject to <strong>15% import duty</strong> + VAT.</p>
+                                        </div>
+                                        <div class="guideline-card">
+                                            <h4>Documentation Required</h4>
+                                            <p>Invoice, packing list, and customs declaration. Personal imports under R20,000 have simplified procedures.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="shipping-options">
+                                    <h3><i class="fas fa-shipping-fast"></i> Shipping Options</h3>
+                                    <div class="shipping-comparison">
+                                        <div class="shipping-option">
+                                            <h4>PostNet / Aramex</h4>
+                                            <div class="shipping-details">
+                                                <span class="time">7-14 days</span>
+                                                <span class="cost">R150-R400</span>
+                                                <span class="reliability">High reliability</span>
+                                            </div>
+                                            <p>Best for small orders. Handles customs clearance.</p>
+                                        </div>
+                                        <div class="shipping-option">
+                                            <h4>DHL / FedEx</h4>
+                                            <div class="shipping-details">
+                                                <span class="time">3-7 days</span>
+                                                <span class="cost">R300-R800</span>
+                                                <span class="reliability">Very high</span>
+                                            </div>
+                                            <p>Fast but expensive. Includes door-to-door service.</p>
+                                        </div>
+                                        <div class="shipping-option">
+                                            <h4>SA Post (Registered)</h4>
+                                            <div class="shipping-details">
+                                                <span class="time">14-30 days</span>
+                                                <span class="cost">R50-R150</span>
+                                                <span class="reliability">Variable</span>
+                                            </div>
+                                            <p>Cheapest but unreliable. Risk of loss or delays.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-actions">
+                            <button class="btn btn-outline" onclick="navigateToSection('comparison')">
+                                <i class="fas fa-arrow-left"></i> Back to Comparison
+                            </button>
+                            <button class="btn btn-primary" onclick="completeSection('import-guide')">
+                                Complete Import Guide <i class="fas fa-check"></i>
+                            </button>
+                            <button class="btn btn-outline" onclick="navigateToSection('tools')">
+                                Continue to Tools <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Interactive Tools Section -->
+                    <section id="tools" class="content-section">
+                        <div class="section-header">
+                            <h2>Interactive Tools</h2>
+                            <p>Use our specialized tools to make informed hardware decisions.</p>
+                        </div>
+
+                        <div class="section-content">
+                            <div class="tools-showcase">
+                                <div class="tool-card featured">
+                                    <div class="tool-header">
+                                        <i class="fas fa-calculator"></i>
+                                        <h3>Advanced Cost Calculator</h3>
+                                    </div>
+                                    <p>Calculate exact project costs with real-time SA market prices, including import duties and shipping.</p>
+                                    <div class="tool-features">
+                                        <span class="feature">✓ Real-time pricing</span>
+                                        <span class="feature">✓ Import duty calculation</span>
+                                        <span class="feature">✓ Multi-supplier comparison</span>
+                                    </div>
+                                    <a href="../tools/cost-calculator.html" class="btn btn-primary">
+                                        Open Calculator <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+
+                                <div class="tool-card">
+                                    <div class="tool-header">
+                                        <i class="fas fa-magic"></i>
+                                        <h3>Hardware Selection Wizard</h3>
+                                    </div>
+                                    <p>Get personalized component recommendations based on your experience level and project goals.</p>
+                                    <div class="tool-features">
+                                        <span class="feature">✓ Experience-based suggestions</span>
+                                        <span class="feature">✓ Budget optimization</span>
+                                        <span class="feature">✓ SA supplier integration</span>
+                                    </div>
+                                    <a href="../tools/hardware-wizard.html" class="btn btn-outline">
+                                        Start Wizard <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+
+                                <div class="tool-card">
+                                    <div class="tool-header">
+                                        <i class="fas fa-search"></i>
+                                        <h3>Supplier Finder</h3>
+                                    </div>
+                                    <p>Find trusted Arduino suppliers in your area with detailed reviews and contact information.</p>
+                                    <div class="tool-features">
+                                        <span class="feature">✓ Location-based search</span>
+                                        <span class="feature">✓ User reviews</span>
+                                        <span class="feature">✓ Stock availability</span>
+                                    </div>
+                                    <a href="../tools/supplier-finder.html" class="btn btn-outline">
+                                        Find Suppliers <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="tools-integration">
+                                <h3><i class="fas fa-link"></i> Integrated Workflow</h3>
+                                <p>Use our tools together for the best results:</p>
+                                <div class="workflow-steps">
+                                    <div class="workflow-step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Hardware Wizard</h4>
+                                            <p>Get personalized recommendations</p>
+                                        </div>
+                                    </div>
+                                    <div class="workflow-arrow">→</div>
+                                    <div class="workflow-step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Cost Calculator</h4>
+                                            <p>Calculate exact project costs</p>
+                                        </div>
+                                    </div>
+                                    <div class="workflow-arrow">→</div>
+                                    <div class="workflow-step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Supplier Finder</h4>
+                                            <p>Find the best suppliers</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-actions">
+                            <button class="btn btn-outline" onclick="navigateToSection('import-guide')">
+                                <i class="fas fa-arrow-left"></i> Back to Import Guide
+                            </button>
+                            <button class="btn btn-primary" onclick="completeSection('tools')">
+                                Complete Module 2 <i class="fas fa-graduation-cap"></i>
+                            </button>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -225,5 +620,6 @@
     </style>
 
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/module-2.js"></script>
 </body>
 </html>
