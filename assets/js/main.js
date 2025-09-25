@@ -374,7 +374,7 @@ function openTool(toolType) {
             title: 'SA Supplier Finder',
             url: 'tools/supplier-finder.html',
             description: 'Find trusted Arduino suppliers near you in South Africa',
-            available: false
+            available: true
         },
         'code-playground': {
             title: 'Arduino Code Playground',

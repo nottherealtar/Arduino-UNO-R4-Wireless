@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA Supplier Finder - Arduino UNO R4 WiFi Journey</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/tools.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="tool-page">
+    <header class="tool-header">
+        <div class="container">
+            <div class="tool-nav">
+                <a href="../index.html" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Journey
+                </a>
+                <h1><i class="fas fa-map-marker-alt"></i> SA Supplier Finder</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="tool-content">
+        <div class="container">
+            <div class="tool-intro">
+                <p>Find trusted Arduino suppliers near you in South Africa. Compare prices, check availability, 
+                   and get contact information for local electronics stores and online retailers.</p>
+            </div>
+
+            <div class="supplier-finder-container">
+                <!-- Search and Filter Section -->
+                <div class="search-section">
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="Search suppliers by name, location, or specialty...">
+                        <button id="search-btn" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <div class="filter-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Location</label>
+                            <select id="location-filter">
+                                <option value="">All Locations</option>
+                                <option value="cape-town">Cape Town</option>
+                                <option value="johannesburg">Johannesburg</option>
+                                <option value="durban">Durban</option>
+                                <option value="pretoria">Pretoria</option>
+                                <option value="port-elizabeth">Port Elizabeth</option>
+                                <option value="bloemfontein">Bloemfontein</option>
+                                <option value="online">Online Only</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label><i class="fas fa-tags"></i> Specialty</label>
+                            <select id="specialty-filter">
+                                <option value="">All Specialties</option>
+                                <option value="arduino">Arduino Boards</option>
+                                <option value="sensors">Sensors</option>
+                                <option value="components">Electronic Components</option>
+                                <option value="tools">Tools & Equipment</option>
+                                <option value="kits">Starter Kits</option>
+                                <option value="robotics">Robotics</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label><i class="fas fa-star"></i> Rating</label>
+                            <select id="rating-filter">
+                                <option value="">Any Rating</option>
+                                <option value="4.5">4.5+ Stars</option>
+                                <option value="4.0">4.0+ Stars</option>
+                                <option value="3.5">3.5+ Stars</option>
+                            </select>
+                        </div>
+                        
+                        <button id="clear-filters" class="btn btn-outline">
+                            <i class="fas fa-times"></i> Clear Filters
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="results-section">
+                    <div class="results-header">
+                        <h3 id="results-count">Loading suppliers...</h3>
+                        <div class="view-options">
+                            <button class="view-btn active" data-view="grid">
+                                <i class="fas fa-th"></i> Grid
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <i class="fas fa-list"></i> List
+                            </button>
+                            <button class="view-btn" data-view="map">
+                                <i class="fas fa-map"></i> Map
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="suppliers-container" class="suppliers-grid">
+                        <!-- Suppliers will be populated by JavaScript -->
+                    </div>
+
+                    <!-- Map View -->
+                    <div id="map-container" class="map-view" style="display: none;">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h4>Interactive Map</h4>
+                            <p>Map integration would display supplier locations across South Africa</p>
+                            <div class="map-legend">
+                                <div class="legend-item">
+                                    <span class="marker physical"></span> Physical Stores
+                                </div>
+                                <div class="legend-item">
+                                    <span class="marker online"></span> Online Retailers
+                                </div>
+                                <div class="legend-item">
+                                    <span class="marker both"></span> Both Physical & Online
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <button class="btn btn-secondary" id="export-suppliers">
+                        <i class="fas fa-download"></i> Export Supplier List
+                    </button>
+                    <button class="btn btn-outline" id="compare-suppliers">
+                        <i class="fas fa-balance-scale"></i> Compare Selected
+                    </button>
+                    <button class="btn btn-outline" id="get-directions">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/tools-common.js"></script>
+    <script src="../assets/js/supplier-finder.js"></script>
+</body>
+</html>
